@@ -17,7 +17,6 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
-      <img src="logo.png" className="logo" />
       <h1>Login</h1>
       <input
         type="text"
