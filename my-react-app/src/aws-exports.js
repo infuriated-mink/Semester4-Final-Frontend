@@ -1,4 +1,4 @@
-// const awsmobile = {
+// const awsconfig = {
 //     "aws_project_region": "use-east-1",
 //     "aws_cognito_identity_pool_id": "us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
 //     "aws_cognito_region": "us-east-1",
@@ -12,4 +12,4 @@
 //     "aws_user_files_s3_bucket_region": "us-east-1"
 // };
 
-// export default awsmobile; Example aws-exports.js file.
+// export default awsconfig; Example aws-exports.js file.
