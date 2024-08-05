@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Events from "./components/Events";
+import logo from "./logo.svg";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <main>
+        <Events /> {/* Integrate the Events component here */}
+      </main>
     </div>
   );
 }
