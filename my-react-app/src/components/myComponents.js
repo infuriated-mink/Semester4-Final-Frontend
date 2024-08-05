@@ -68,7 +68,7 @@ const MyComponent = () => {
 
   return (
     <div>
-      {/* Render your data here */}
+      <h1>Landing Page</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
