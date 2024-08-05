@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/clerk-react";
 
-const clerkFrontendApi = ''; // Sample Clerk frontend API key
+const clerkFrontendApi = ''; // This is where the Clerk frontend API key will go.
 
 const ClerkConfig = ({ children }) => {
     <ClerkProvider frontendApi={clerkFrontendApi}>
