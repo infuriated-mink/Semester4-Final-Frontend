@@ -11,7 +11,7 @@ const LoginPage = () => {
   const history = useHistory();
 
   const handleLogin = async () => {
-if (!username || password) {
+if (!username || !password) {
     setError('Username and password are required.');
     return;
 }
