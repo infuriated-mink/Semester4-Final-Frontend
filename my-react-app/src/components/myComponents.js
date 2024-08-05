@@ -8,12 +8,52 @@ const MyComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get("/your-endpoint");
+        const response = await axiosInstance.get("/events");
         setData(response.data);
       } catch (err) {
         setError(err);
       }
     };
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await axiosInstance.get("/attendees");
+    //         setData(response.data);
+    //       } catch (err) {
+    //         setError(err);
+    //       }
+    //     };
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await axiosInstance.get("/speakers");
+    //         setData(response.data);
+    //       } catch (err) {
+    //         setError(err);
+    //       }
+    //     };
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await axiosInstance.get("/events_speakers");
+    //         setData(response.data);
+    //       } catch (err) {
+    //         setError(err);
+    //       }
+    //     };
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await axiosInstance.get("/venues");
+    //         setData(response.data);
+    //       } catch (err) {
+    //         setError(err);
+    //       }
+    //     };
 
     fetchData();
   }, []);
