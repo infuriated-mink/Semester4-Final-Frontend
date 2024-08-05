@@ -1,5 +1,5 @@
 import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
+import awsconfig from './aws-exports.js';
 
 class AmplifyConfig {
     constructor() {
