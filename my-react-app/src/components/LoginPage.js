@@ -1,15 +1,24 @@
 import { Auth } from 'aws-amplify';
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './LoginPage.css';
+// import AmplifyConfig from './AmplifyConfig'; For the singleton configuration.
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const history = useHistory();
 
   const handleLogin = async () => {
+if (!username || password) {
+    setError('Username and password are required.');
+    return;
+}
+
     try {
       await Auth.signIn(username, password);
+      history.push('/landing');
     } catch (err) {
       setError(err.message);
     }
@@ -30,7 +39,7 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleLogin}>Login</button>
+          <button type="button" onClick={handleLogin}>Login</button>
           {error && <p className="error">{error}</p>}
     </div>
   );
