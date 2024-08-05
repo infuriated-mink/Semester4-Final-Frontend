@@ -2,7 +2,7 @@ import { Auth } from 'aws-amplify';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LoginPage.css';
-// import AmplifyConfig from './AmplifyConfig.js'; For the singleton configuration.
+//  import AmplifyConfig from '../config/AmplifyConfig.js'; For the singleton configuration.
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
