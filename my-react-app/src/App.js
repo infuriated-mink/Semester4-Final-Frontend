@@ -1,4 +1,4 @@
-import './components/LoginPage.css';
+import LoginPage from "./components/LoginPage";
 
 function App() {
   return (
