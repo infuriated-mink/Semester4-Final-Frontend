@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axiosInstance from "../api/axiosInstance";
+import { Link } from "react-router-dom";
 
 const Event = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ const Event = () => {
 
   return (
     <div>
+      <Link to="/">Back</Link>
       <h1>{event.eventName}</h1>
       <p>{event.date}</p>
       <p>{event.venueId}</p>
