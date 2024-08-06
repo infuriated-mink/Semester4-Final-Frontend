@@ -1,8 +1,8 @@
 import "./App.css";
-import Events from "./components/Events";
+import Events from "./pages/Events";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from "./logo.svg";
-import Event from "./components/Event";
+import Event from "./pages/Event";
 
 function App() {
   return (
