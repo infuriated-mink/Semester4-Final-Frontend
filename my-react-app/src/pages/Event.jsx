@@ -40,6 +40,7 @@ const Event = () => {
       <h1>{event.eventName}</h1>
       <p>{event.date}</p>
       <p>{event.venueId}</p>
+      <img src={event.image} alt="sadness not working..." />
       {/* Render more event details here */}
     </div>
   );
