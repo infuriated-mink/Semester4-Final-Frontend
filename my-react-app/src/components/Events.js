@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../api/axiosInstance";
+import { Link } from "react-router-dom";
+import Event from "./Event";
 
 const Events = () => {
   const [events, setEvents] = useState(null);
@@ -36,7 +38,9 @@ const Events = () => {
       {events && events.length > 0 ? (
         <ul>
           {events.map((event, index) => (
-            <li key={index}>{event.eventName}</li>
+            <li key={event.eventId}>
+              <Link to={`/events/${event.eventId}`}>{event.eventName}</Link>
+            </li>
           ))}
         </ul>
       ) : (

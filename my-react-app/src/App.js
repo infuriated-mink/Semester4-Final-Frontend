@@ -1,28 +1,17 @@
 import "./App.css";
 import Events from "./components/Events";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from "./logo.svg";
+import Event from "./components/Event";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <main>
-        <Events /> {/* Integrate the Events component here */}
-      </main>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<Event />} />
+      </Routes>
+    </Router>
   );
 }
 
