@@ -11,7 +11,7 @@ const Event = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await axiosInstance.get(`/events/${id}`);
+        const response = await axiosInstance.get(`/event/${id}`);
         setEvent(response.data);
       } catch (err) {
         setError(err);
