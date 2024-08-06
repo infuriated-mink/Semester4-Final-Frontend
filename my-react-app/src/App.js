@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/events" element={<Events />} />
+        <Route path="/" element={<Events />} />
         <Route path="/events/:id" element={<Event />} />
       </Routes>
     </Router>
