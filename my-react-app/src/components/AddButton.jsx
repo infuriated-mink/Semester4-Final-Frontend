@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddEditEventForm from './AddEditEventForm';
+import AddEventForm from './AddEventForm';
 
 const AddButton = () => {
     const [showForm, setShowForm] = useState(false);
@@ -11,7 +11,7 @@ const AddButton = () => {
     return (
         <div>
             <button onClick={handleAddClick}>Add</button>
-            {showForm && <AddEditEventForm />}
+            {showForm && <AddEventForm />}
         </div>
     );
 };
