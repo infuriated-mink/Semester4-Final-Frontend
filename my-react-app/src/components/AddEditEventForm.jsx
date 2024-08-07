@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const AddVenueForm = () => {
+const AddEditEventForm = () => {
     const [eventName, setEventName] = useState('');
     const [eventDate, setEventDate] = useState('');
     const [venueID, setVenueID] = useState('');
@@ -59,4 +59,4 @@ const AddVenueForm = () => {
     );
 };
 
-export default AddVenueForm;
+export default AddEditEventForm;
