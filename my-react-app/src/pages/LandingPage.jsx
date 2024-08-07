@@ -50,6 +50,11 @@ const LandingPage = () => {
           {events.map((event) => (
             <li key={event.eventId}>
               {event.eventName} - {event.venue?.venueName} - {event.date}
+              <img
+                src={event.image}
+                alt="photo not available..."
+                width={"100px"}
+              />
               <Button onClick={() => handleEdit(event)}>Edit</Button>
             </li>
           ))}
@@ -62,7 +67,7 @@ const LandingPage = () => {
           show={showEditForm}
           handleClose={handleCloseEditForm}
           eventId={selectedEvent.eventId}
-          refreshEvents={refreshEvents} 
+          refreshEvents={refreshEvents}
         />
       )}
     </div>
