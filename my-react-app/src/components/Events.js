@@ -36,7 +36,9 @@ const Events = () => {
       {events && events.length > 0 ? (
         <ul>
           {events.map((event, index) => (
-            <li key={index}>{event.eventName}</li>
+            <li key={index}>
+              {event.eventName} - {event.venue?.venueName} - {event.date}
+            </li>
           ))}
         </ul>
       ) : (
