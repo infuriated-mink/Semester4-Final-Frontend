@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../api/axiosInstance";
 import { Modal, Button, Form } from "react-bootstrap";
+import handleDelete from "./DeleteEvent";
 
 const EditEventForm = ({ show, handleClose, eventId, refreshEvents }) => {
   const [event, setEvent] = useState(null);
@@ -56,7 +57,9 @@ const EditEventForm = ({ show, handleClose, eventId, refreshEvents }) => {
             <Form.Control
               type="text"
               value={event?.eventName || ""}
-              onChange={(e) => setEvent({ ...event, eventName: e.target.value })}
+              onChange={(e) =>
+                setEvent({ ...event, eventName: e.target.value })
+              }
             />
           </Form.Group>
           <Form.Group controlId="formEventVenue">

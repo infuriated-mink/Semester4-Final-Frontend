@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axiosInstance from "../api/axiosInstance";
 import EditEventForm from "../components/EditEventForm";
 import { Button } from "react-bootstrap";
+import DeleteEvent from "../components/DeleteEvent"; // Import DeleteEvent component
 
 const LandingPage = () => {
   const [events, setEvents] = useState([]);
@@ -50,12 +51,13 @@ const LandingPage = () => {
           {events.map((event) => (
             <li key={event.eventId}>
               {event.eventName} - {event.venue?.venueName} - {event.date}
-              <img
-                src={event.image}
-                alt="photo not available..."
-                width={"100px"}
-              />
+              <img src={event.image} alt="Event image" width={"100px"} />
               <Button onClick={() => handleEdit(event)}>Edit</Button>
+              <DeleteEvent
+                id={event.eventId}
+                refreshEvents={refreshEvents}
+                setError={setError}
+              />
             </li>
           ))}
         </ul>
