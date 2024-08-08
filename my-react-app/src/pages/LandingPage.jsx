@@ -13,7 +13,9 @@ const LandingPage = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axiosInstance.get("/events");
+      const response = await axiosInstance.get("/events", {
+        withCredentials: true,
+      });
       setEvents(response.data);
     } catch (err) {
       setError(err);

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../api/axiosInstance";
 import { Modal, Button, Form } from "react-bootstrap";
-import handleDelete from "./DeleteEvent";
 
 const EditEventForm = ({ show, handleClose, eventId, refreshEvents }) => {
   const [event, setEvent] = useState(null);
